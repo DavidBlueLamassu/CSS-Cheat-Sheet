@@ -26,7 +26,16 @@ pre {
     display: flex;
     flex-grow: 1;
     align-items: center;
+    user-select: all;
+    cursor: pointer;
 }
+
+/*pre:hover {
+    background-image: linear-gradient(
+    rgba(100, 102, 236, 0.3) 0%,
+    rgba(100, 102, 236, 0.6) 100%
+    );
+}*/
 
 header {
     margin: auto;
@@ -53,6 +62,9 @@ header {
     justify-content: center;
 }
 
+/*https://stackoverflow.com/questions/5229081/
+positionrelative-leaves-an-empty-space*/
+
 .row h2 {
     border: solid white 1px;
     width: 90%;
@@ -63,6 +75,7 @@ header {
     top: -28px;
     z-index: 100;
     background-color: black;
+    margin-bottom: -20px;
 }
 
 article {
@@ -72,13 +85,21 @@ article {
     padding: 10px;
     display: flex;
     flex-direction: column;
+    transition: width 5s;
 }
 
 footer {
     text-align: center;
 }
 
-p {
-    border: solid white;
+article h2 {
+    transition: background-color 2s;
 }
 
+article h2:hover {
+    background-color: red;
+}
+
+article:hover {
+    width: 32%;
+}
